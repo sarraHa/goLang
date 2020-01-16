@@ -1,0 +1,13 @@
+
+
+
+
+type reader struct {
+    r io.Reader
+}
+
+
+// NewReader returns a new io.Reader whose data will be encrypted via rot13
+func NewReader(r io.Reader) io.Reader {
+    return reader{r}
+}
